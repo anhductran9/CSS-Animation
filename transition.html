@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <style>
+        .one{
+            margin-top: 100px;
+            width: 200px;
+            margin-left: 150px;
+            height: 200px;
+            background: red;
+            transition: width, height, background 2s, 3s, 4s;
+            transition-timing-function: ease-in-out;
+            transition-delay: 0.25s;
+            transform: rotate(45deg);
+        }
+        .one:hover{
+            width: 400px;
+            height: 400px;
+            background: blue;
+            transform: scale(2);
+        }
+        .container{
+            width: 400px;
+            height: 400px;
+            background: red;
+            font-size: 18px;
+            text-align: center;
+            margin: 100px;
+            perspective: 800px;
+            transform-style: preserve-3d;
+        }
+        .two{
+            width: 400px;
+            height: 400px;
+            background: blue;
+            transform: rotate3d(20deg, 40deg, 60deg);
+            transition: transform 1s;
+            max-width: 400px;
+            max-height: 400px;
+        }
+        .two:hover{
+            transform: translateX(50px) rotate3d(-2, 0, 2, 50deg) scale3d(2,2,2);
+        }
+    </style>
+</head>
+<body>
+    <h1>The Transition Property</h1>
+    <p>Hover over the div element below, to see the Transition effect</p>
+    <div class="one"></div>
+    <div class="container">
+        <div class="two"></div>
+    </div>
+</body>
+</html>

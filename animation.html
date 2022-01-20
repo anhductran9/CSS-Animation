@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left: 0;
+            margin-right: 0;
+        }
+        .box{
+            width: 250px;
+            height: 200px;
+            margin-top: 200px;
+            margin-left: auto;
+            margin-right: auto;
+            background: orange;
+            animation-name: examples;
+            animation-duration: 2s;
+            animation-timing-function: cubic-bezier(1, 2, 1, 2);
+            animation-delay: 0.3s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-fill-mode: both;
+            animation-play-state: paused;
+        }
+        .box:hover{
+            animation-play-state: running;
+        }
+        @keyframes examples{
+            0%{
+                border-radius:0%;
+            }
+            50%{
+                border-radius: 50%;
+                background: orangered;
+            }
+            100%{
+                border-radius: 50%;
+                background: red;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Animation</h1>
+    <div class="box"></div>
+</body>
+</html>
